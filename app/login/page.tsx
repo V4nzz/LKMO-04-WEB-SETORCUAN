@@ -48,33 +48,42 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-green-500 flex items-center justify-center">
-      <div className="flex gap-8 w-full max-w-2xl px-4">
-        <div className="hidden md:flex flex-col justify-center">
-          <h1 className="text-6xl font-bold text-black">Login</h1>
+    <main className="min-h-screen bg-green-500 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-4xl grid grid-cols-1 md:grid-cols-2">
+        <div className="hidden md:flex items-center justify-center p-8 bg-white">
+          
+          {/* Ganti placeholder di atas dengan komponen Image, contoh:
+            <Image 
+              src="/path-to-your-image.png" 
+              alt="Recycling" 
+              width={400} 
+              height={400} 
+              className="object-contain"
+            /> 
+          */}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 w-full md:max-w-sm shadow-lg">
+        <div className="p-8 md:p-12 w-full">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium mb-2 text-center">Username / Email</label>
+              <label className="block text-sm font-medium mb-2 text-gray-700">Username</label>
               <input
                 type="text"
                 value={usernameOrEmail}
                 onChange={(e) => setUsernameOrEmail(e.target.value)}
-                className="w-full bg-gray-200 rounded-md p-3 border border-gray-300"
+                className="w-full bg-gray-200 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
                 placeholder="Masukkan username atau email"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2 text-center">Password</label>
+              <label className="block text-sm font-medium mb-2 text-gray-700">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-gray-200 rounded-md p-3 border border-gray-300 pr-10"
+                  className="w-full bg-gray-200 rounded-md p-3 pr-10 focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="Masukkan password"
                 />
                 <button
@@ -98,9 +107,10 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <p className="text-center mt-6 underline">
-            <Link href="/register" className="text-green-600 hover:text-green-700">
-              Belum memiliki akun? Register
+          <p className="text-center text-sm text-gray-600 mt-6">
+            Belum memiliki akun?{" "}
+            <Link href="/register" className="text-green-600 hover:text-green-700 font-medium">
+              Register
             </Link>
           </p>
         </div>

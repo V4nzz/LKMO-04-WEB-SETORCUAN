@@ -1,7 +1,8 @@
 export const NAVIGATION_ROUTES = {
   PUBLIC: {
     HOME: "/",
-    PRICES_LOCATIONS: "/prices-locations",
+    PRICES: "/prices",
+    LOCATIONS: "/location",
   },
   AUTH: {
     LOGIN: "/login",

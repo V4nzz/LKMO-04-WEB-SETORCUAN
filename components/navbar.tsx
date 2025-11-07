@@ -29,10 +29,10 @@ export function Navbar() {
             <Link href="/" className="text-foreground hover:text-primary transition">
               Home
             </Link>
-            <Link href="/prices-locations" className="text-foreground hover:text-primary transition">
+            <Link href="/prices" className="text-foreground hover:text-primary transition">
               Prices
             </Link>
-            <Link href="/prices-locations" className="text-foreground hover:text-primary transition">
+            <Link href="/location" className="text-foreground hover:text-primary transition">
               Locations
             </Link>
           </div>
