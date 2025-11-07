@@ -1,0 +1,26 @@
+### Uji Operasi CREATE: Membuat Pengguna Baru
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "name": "Budi Santoso",
+  "email": "budi.santoso@contoh.com",
+  "password": "passwordAman123",
+  "phone": "081234567890",
+  "walletNumber": "789012345"
+}
+
+###
+
+### Uji Operasi UPDATE: Mengubah Nomor Telepon Pengguna ID 1
+PATCH http://localhost:4000/api/users/1
+Content-Type: application/json
+
+{
+    "phone": "089988776655"
+}
+
+###
+
+### Uji Operasi READ: Mengambil Semua Pengguna
+GET http://localhost:4000/api/users
